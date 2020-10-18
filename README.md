@@ -121,3 +121,11 @@ $ yarn start
 # npm
 $ npm run start
 ```
+<br>
+<br>
+<br>
+<br>
+
+<div align='center'>
+  Project created by: <a href='https://github.com/BrendoSPinheiro' > Brendo Souza ❤ </a>
+<div>
