@@ -33,14 +33,14 @@ This web version allow users to look for orphanages near from yourself.
 
 # 📸 Screenshots
 
-<img src="./screenshots/landing.png" width="49%"/>
-<img src="./screenshots/mapLight.png" width="49%"/>
-<img src="./screenshots/mapDark.png" width="49%"/>
-<img src="./screenshots/mapSatelite.png" width="49%"/>
-<img src="./screenshots/form.png" width="49%"/>
-<img src="./screenshots/orphanage.png" width="49%"/>
-<img src="./screenshots/success.png" width="49%"/>
-<img src="./screenshots/orphanage2.png" width="49%"/>
+<img src="./screenshots/landing.png" width="36%"/>
+<img src="./screenshots/mapLight.png" width="36%"/>
+<img src="./screenshots/mapDark.png" width="36%"/>
+<img src="./screenshots/mapSatelite.png" width="36%"/>
+<img src="./screenshots/form.png" width="36%"/>
+<img src="./screenshots/orphanage.png" width="36%"/>
+<img src="./screenshots/success.png" width="36%"/>
+<img src="./screenshots/orphanage2.png" width="36%"/>
 
 # ⚙ Functionalities
 
