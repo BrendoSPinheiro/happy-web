@@ -114,7 +114,7 @@ function CreateOrphanage() {
             </div>
 
             <div className="input-block">
-              <label htmlFor="phone">Telefone</label>
+              <label htmlFor="phone">Whatsapp</label>
               <InputMask
                 mask="(99) 9 9999-9999"
                 id="phone"
