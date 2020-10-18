@@ -116,8 +116,8 @@ Start the [API](https://github.com/BrendoSPinheiro/happy-api) (see its README fo
 # 👨🏽‍💻 Run the project
 ```
 # yarn
-$ yarn dev
+$ yarn start
 
 # npm
-$ npm run dev
+$ npm run start
 ```
