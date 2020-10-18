@@ -89,9 +89,14 @@ function Orphanage() {
                 doubleClickZoom={false}
               >
                 <TileLayer
-                  url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                  url={`
+                    https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
                 />
-                <Marker interactive={false} icon={mapIcon} position={[orphanage.latitude, orphanage.longitude]} />
+                <Marker 
+                  interactive={false} 
+                  icon={mapIcon} 
+                  position={[orphanage.latitude, orphanage.longitude]} 
+                />
               </Map>
 
               <footer>
@@ -133,7 +138,16 @@ function Orphanage() {
 
             <button type="button" className="contact-button">
               <FaWhatsapp size={20} color="#FFF" />
-              Entrar em contato
+              <a 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                href={
+                  `https://api.whatsapp.com/send?phone=+55${orphanage.phone}&text=Olá! Gostaria de agendar uma visita.`
+                }
+                className="link-whatsapp" 
+              >
+                Entrar em contato
+              </a>
             </button>
           </div>
         </div>

@@ -8,7 +8,9 @@
 
 #page-map aside {
   width: 440px;
-  background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+  background: linear-gradient(329.54deg, #00C7C7 0%, #29B6D1 100%);
+  /* background-image: linear-gradient(329.54deg, #30cfd0 0%, #330867 100%); */
+
   padding: 80px;
 
   display: flex;
@@ -59,6 +61,29 @@
   align-items: center;
 
   transition: background-color 0.2s;
+}
+
+#page-map .satelite, .dark, .light {
+  border: none;
+  color: #FFF;
+  font-size: 14px;
+  outline: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-map .satelite {
+  bottom: 275px;
+}
+
+#page-map .dark {
+  bottom: 205px;
+}
+
+#page-map .light {
+  bottom: 135px;
 }
 
 #page-map .create-orphanage:hover {

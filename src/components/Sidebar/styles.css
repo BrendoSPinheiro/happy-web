@@ -3,7 +3,8 @@ aside.app-sidebar {
   height: 100%;
   padding: 32px 24px;
   background: linear-gradient(329.54deg, #15B6D6 0%, #15D6D6 100%);
-
+  /* background-image: linear-gradient(329.54deg, #30cfd0 0%, #330867 100%); */
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -19,6 +19,7 @@ interface Orphanage {
 function OrphanagesMap() {
 
   const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
+  const [mapTheme, setMapTheme] = useState('light');
 
   useEffect(() => {
     api.get('/orphanages').then(response => {
@@ -32,7 +33,7 @@ function OrphanagesMap() {
         <header>
           <img src={mapMarkerImg} alt="Happy" />
           <h2>Escolha um orfanato no mapa</h2>
-          <p>Muitas crianças estão esperando a sua visita :)</p>
+          <p>Muitas crianças estão esperando a sua visita {':)'}</p>
         </header>
 
         <footer>
@@ -51,7 +52,9 @@ function OrphanagesMap() {
       >
         {/*<TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"/>*/}
         <TileLayer
-          url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+          url={
+            `https://api.mapbox.com/styles/v1/mapbox/${mapTheme}-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`
+          }
         />
 
         {orphanages.map(orphanage => {
@@ -73,6 +76,24 @@ function OrphanagesMap() {
 
       </Map>
 
+      <button 
+        className="create-orphanage satelite"
+        onClick={() => setMapTheme('satellite-streets')}
+      >
+        Satélite
+      </button>
+      <button 
+        className="create-orphanage light"
+        onClick={() => setMapTheme('light')}
+      >
+        Light
+      </button>
+      <button 
+        className="create-orphanage dark"
+        onClick={() => setMapTheme('dark')}
+      >
+        Dark
+      </button>
       <Link to="/orphanages/create" className="create-orphanage">
         <FiPlus size={32} color="#FFF" />
       </Link>

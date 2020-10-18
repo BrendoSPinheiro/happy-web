@@ -3,6 +3,7 @@ import { Map, Marker, TileLayer } from 'react-leaflet';
 import { FiPlus } from 'react-icons/fi';
 import { LeafletMouseEvent } from 'leaflet';
 import { useHistory } from "react-router-dom";
+import InputMask from 'react-input-mask';
 
 import Sidebar from '../../components/Sidebar';
 import './styles.css';
@@ -44,9 +45,7 @@ function CreateOrphanage() {
 
     await api.post('/orphanages', data);
 
-    alert('Cadastro realizado com sucesso');
-
-    history.push('/app');
+    history.push('/orphanages/create/success');
   }
 
   function handleMapClick(event: LeafletMouseEvent) {
@@ -116,7 +115,8 @@ function CreateOrphanage() {
 
             <div className="input-block">
               <label htmlFor="phone">Telefone</label>
-              <input
+              <InputMask
+                mask="(99) 9 9999-9999"
                 id="phone"
                 value={phone}
                 onChange={event => setPhone(event.target.value)}
